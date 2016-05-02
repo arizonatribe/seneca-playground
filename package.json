@@ -1,13 +1,15 @@
 {
   "name": "seneca-hello-world",
   "version": "1.0.0",
-  "description": "Exploring Seneca and PM2 Microservice technologies",
+  "description": "Exploring Seneca and PM2 Microservice technologies and following some tutorials",
   "main": "index.js",
   "scripts": {
     "start": "npm run api",
     "employee": "node ./src/employee",
     "messaging": "node ./src/messaging",
     "api": "node ./src/api",
+    "cluster": "pm2 start ./src/cluster -i 0",
+    "cluster-cleanup": "pm2 stop cluster && pm2 delete cluster",
     "math": "node ./src/math-ah-ah",
     "micromerce": "node ./src/micromerce",
     "test": "echo \"Error: no test specified\" && exit 1"
