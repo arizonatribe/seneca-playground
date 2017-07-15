@@ -1,6 +1,6 @@
-import {pluginInit} from '../utils';
+const {pluginInit} = require('../utils');
 
-export function ProductManager(options) {
+exports.ProductManager = function(options) {
   const PROD_AREA = 'product';
 
   this.add({

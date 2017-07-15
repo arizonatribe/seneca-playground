@@ -1,7 +1,9 @@
-import mandrill from 'mandrill-api/mandrill';
+const {logger} = require('utilitarian/logger');
+const mandrill = require('mandrill-api/mandrill');
 
-export var mandrillClient = new mandrill.Mandrill('<YOUR-KEY-HERE>');
+exports.mandrillClient = new mandrill.Mandrill('<YOUR-KEY-HERE>');
 
 mandrillClient.users.info({},
-  result => console.log(result),
-  error => console.error(error));
+  result => logger.info(result),
+  error => logger.error(error)
+);

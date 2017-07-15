@@ -1,4 +1,4 @@
-export function EmployeeStorage(options) {
+exports.EmployeeStorage = function(options) {
   this.add({
     role: 'employee',
     cmd: 'add'
@@ -12,3 +12,4 @@ export function EmployeeStorage(options) {
     });
   });
 }
+

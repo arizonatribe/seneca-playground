@@ -1,4 +1,4 @@
-export function sms(options) {
+exports.sms = function(options) {
   this.add({
     channel: 'sms',
     action: 'send'

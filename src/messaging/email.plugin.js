@@ -1,4 +1,4 @@
-export function email(options) {
+exports.email = function(options) {
   this.add({
     channel: 'email',
     action: 'send'

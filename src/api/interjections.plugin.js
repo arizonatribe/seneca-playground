@@ -1,13 +1,11 @@
-import * as utils from '../utils';
+const {pluginInit} = require('../utils');
 
-const interject = (phrase) => `${utils.titleCase(phrase)}!`,
-    respond = (args, done) => {
-      done(null, {
-        interjection: interject(args.cmd)
-      });
-    };
+const interject = (phrase) => `${utils.titleCase(phrase)}!`;
+const respond = (args, done) => {
+  done(null, {interjection: interject(args.cmd)});
+};
 
-export function Interjections(options) {
+function Interjections(options) {
   this.add('role:api,cmd:bazinga', respond)
     .add('role:api,cmd:zoinks', respond)
     .add('role:api,cmd:wowsers', respond)
@@ -20,3 +18,5 @@ export function Interjections(options) {
     .add('role:api,cmd:brilliant', respond)
     .add({init: 'interjections'}, utils.pluginInit);
 }
+
+module.exports = exports = Interjections;

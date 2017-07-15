@@ -1,4 +1,4 @@
-export class Email {
+class Email {
   constructor(args, combineNameAndEmail) {
     this.subject = args.subject;
     
@@ -43,3 +43,6 @@ export class Email {
     });
   }
 }
+
+module.exports = exports = Email;
+

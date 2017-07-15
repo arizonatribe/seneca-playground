@@ -1,14 +1,12 @@
-import Seneca from 'seneca';
-import express from 'express';
-import {Interjections} from './interjections.plugin';
+const seneca = require('seneca')();
+const express = require('express');
+const Interjections = require('./interjections.plugin');
 
-const seneca = Seneca(),
-    app = express();
+const app = express();
 
-seneca.use(Interjections)
-  .act({
-    role: 'web'
-  }, {
+seneca
+  .use(Interjections)
+  .act({role: 'web'}, {
     use: {
       prefix: '/interjections',
       pin: {
@@ -32,6 +30,4 @@ seneca.use(Interjections)
     }
   });
 
-app.use(seneca.export('web'));
-
-app.listen(3000);
+app.use(seneca.export('web')).listen(3000);

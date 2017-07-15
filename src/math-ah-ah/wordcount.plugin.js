@@ -1,6 +1,6 @@
-import {pluginInit} from '../utils';
+const {pluginInit} = require('../utils');
 
-export function WordCount(options) {
+exports.WordCount = function(options) {
   this.add({
     cmd: 'wordcount'
   }, (msg, respond) => {

@@ -1,4 +1,4 @@
-export function post() {
+exports.post = function() {
   this.add({
     channel: 'post',
     action: 'queue'

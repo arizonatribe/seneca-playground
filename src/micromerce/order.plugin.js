@@ -1,6 +1,6 @@
 const ORD_AREA = 'orders';
 
-export function OrderManager() {
+exports.OrderManager = function() {
   this.add({
       area: ORD_AREA,
       action: 'fetch'

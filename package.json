@@ -1,8 +1,11 @@
 {
-  "name": "seneca-hello-world",
-  "version": "1.0.0",
+  "name": "seneca-playground",
+  "version": "1.0.1",
   "description": "Exploring Seneca and PM2 Microservice technologies and following some tutorials",
   "main": "index.js",
+  "engines": {
+    "node": ">=7.4"
+  },
   "scripts": {
     "start": "npm run api",
     "employee": "node ./src/employee",
@@ -14,20 +17,37 @@
     "micromerce": "node ./src/micromerce",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+	"seneca",
+	"microservices",
+	"nodejs",
+	"javascript",
+	"express"
+  ],
   "author": "David Nunez <arizonatribe@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "babel": "^6.5.2",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-register": "^6.7.2",
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "mandrill-api": "^1.0.45",
-    "nodemailer": "^2.3.2",
-    "seneca": "^2.0.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-es2015": "6.24.1",
+    "body-parser": "1.15.1",
+    "express": "4.13.4",
+    "mandrill-api": "1.0.45",
+    "nodemailer": "2.3.2",
+    "seneca": "2.0.1",
     "seneca-entity": "0.0.1",
-    "seneca-mongo-store": "^0.2.0",
-    "xoauth2": "^1.1.0"
+    "seneca-mongo-store": "0.2.0",
+    "utilitarian": "1.0.5",
+    "xoauth2": "1.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-es2015-modules-commonjs"
+    ]
   }
 }

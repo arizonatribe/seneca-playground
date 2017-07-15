@@ -1,15 +1,16 @@
-import {pluginInit} from '../utils';
-import {mandrillClient} from './mailer-mandrill';
-import {transporter} from './mailer-node';
-import {Email} from './email';
+const {logger} = require('utilitarian/logger');
+const {pluginInit} = require('../utils');
+const {mandrillClient} = require('./mailer-mandrill');
+const {transporter} = require('./mailer-node');
+const Email = require('./email');
 
-export function Emailer(options) {
+exports.Emailer = function(options) {
   // this.add({
   //   area: 'email',
   //   action: 'send',
   //   template: '*'
   // }, (args, done) => {
-  //   console.log('sending');
+  //   logger.info('sending');
 
   //   mandrillClient.messages.sendTemplate({
   //     template_name: args.template,
@@ -29,7 +30,7 @@ export function Emailer(options) {
   //   area: 'email',
   //   action: 'send'
   // }, (args, done) => {
-  //   console.log(args);
+  //   logger.info(args);
 
   //   mandrillClient.messages.send({
   //     message: new Email(args)

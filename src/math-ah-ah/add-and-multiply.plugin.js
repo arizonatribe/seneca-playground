@@ -1,6 +1,6 @@
-import {pluginInit} from '../utils';
+const {pluginInit} = require('../utils');
 
-export function AddAndMultiply(options) {
+exports.AddAndMultiply = function(options) {
   options.log('ready to add and multiply');
   this.add({
     role: 'math',

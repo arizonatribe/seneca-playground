@@ -1,6 +1,6 @@
 const UI_AREA = 'ui';
 
-export function Ui(options) {
+exports.Ui = function(options) {
   this.add({
     area: UI_AREA,
     action: 'products'

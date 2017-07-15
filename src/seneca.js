@@ -1,3 +1,3 @@
-import Seneca from 'seneca';
+const Seneca = require('seneca');
 
-export default Seneca();
+module.exports = exports = Seneca();
